@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0487DEE1BF51A8D00811D40 /* CTDateTimePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0487DED1BF51A8D00811D40 /* CTDateTimePicker.h */; };
-		C0487DF01BF51A8D00811D40 /* CTDateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0487DEF1BF51A8D00811D40 /* CTDateTimePicker.m */; };
+		C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C01871541BF5395500AA8CCB /* CTDateTimePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +17,15 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				C0487DEE1BF51A8D00811D40 /* CTDateTimePicker.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C01871531BF5395500AA8CCB /* CTDateTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDateTimePicker.h; sourceTree = SOURCE_ROOT; };
+		C01871541BF5395500AA8CCB /* CTDateTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDateTimePicker.m; sourceTree = SOURCE_ROOT; };
 		C0487DEA1BF51A8D00811D40 /* libCTDateTimePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCTDateTimePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0487DED1BF51A8D00811D40 /* CTDateTimePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDateTimePicker.h; sourceTree = "<group>"; };
-		C0487DEF1BF51A8D00811D40 /* CTDateTimePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDateTimePicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +58,8 @@
 		C0487DEC1BF51A8D00811D40 /* CTDateTimePicker */ = {
 			isa = PBXGroup;
 			children = (
-				C0487DED1BF51A8D00811D40 /* CTDateTimePicker.h */,
-				C0487DEF1BF51A8D00811D40 /* CTDateTimePicker.m */,
+				C01871531BF5395500AA8CCB /* CTDateTimePicker.h */,
+				C01871541BF5395500AA8CCB /* CTDateTimePicker.m */,
 			);
 			path = CTDateTimePicker;
 			sourceTree = "<group>";
@@ -122,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0487DF01BF51A8D00811D40 /* CTDateTimePicker.m in Sources */,
+				C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +244,7 @@
 				C0487DF51BF51A8D00811D40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
