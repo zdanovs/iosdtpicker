@@ -18,6 +18,7 @@ Based on [RMDateSelectionViewController](https://github.com/CooperRS/RMDateSelec
 
 # Dev/Process Issues
  - Xcode "Product" path for library is always wrong
+ - "Build" vs "build" when usin gui or cli
  - Xcode endless building (Locations/DerivedData issue)
  - XCode project management - Add files to project:
      1. Can't use "Groups"
