@@ -25,3 +25,4 @@ Based on [RMDateSelectionViewController](https://github.com/CooperRS/RMDateSelec
      2. Can't add "Folder reference" to a build process directly
      3. To fix 2. you should use "Add other" in a "Build phases"
      4. To fix 3. you should use "New group from selection"
+ - Cocoa Pods is totally crap
