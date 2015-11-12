@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C01871541BF5395500AA8CCB /* CTDateTimePicker.m */; };
+		C0D1A4F91BF53F750021E768 /* RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D1A4F71BF53F750021E768 /* RMActionController.m */; };
+		C0D1A4FE1BF540190021E768 /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D1A4FC1BF540190021E768 /* RMDateSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +28,10 @@
 		C01871531BF5395500AA8CCB /* CTDateTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDateTimePicker.h; sourceTree = SOURCE_ROOT; };
 		C01871541BF5395500AA8CCB /* CTDateTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDateTimePicker.m; sourceTree = SOURCE_ROOT; };
 		C0487DEA1BF51A8D00811D40 /* libCTDateTimePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCTDateTimePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D1A4F61BF53F750021E768 /* RMActionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMActionController.h; path = ../RMActionController/RMActionController/RMActionController.h; sourceTree = "<group>"; };
+		C0D1A4F71BF53F750021E768 /* RMActionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMActionController.m; path = ../RMActionController/RMActionController/RMActionController.m; sourceTree = "<group>"; };
+		C0D1A4FB1BF540190021E768 /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = ../RMDateSelectionViewController/RMDateSelectionViewController/RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		C0D1A4FC1BF540190021E768 /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = ../RMDateSelectionViewController/RMDateSelectionViewController/RMDateSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				C0487DEC1BF51A8D00811D40 /* CTDateTimePicker */,
+				C0D1A4FA1BF53FE80021E768 /* RMActionController */,
+				C0D1A4FF1BF540270021E768 /* RMDateSelectionViewController */,
 				C0487DEB1BF51A8D00811D40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +70,24 @@
 				C01871541BF5395500AA8CCB /* CTDateTimePicker.m */,
 			);
 			path = CTDateTimePicker;
+			sourceTree = "<group>";
+		};
+		C0D1A4FA1BF53FE80021E768 /* RMActionController */ = {
+			isa = PBXGroup;
+			children = (
+				C0D1A4F61BF53F750021E768 /* RMActionController.h */,
+				C0D1A4F71BF53F750021E768 /* RMActionController.m */,
+			);
+			name = RMActionController;
+			sourceTree = "<group>";
+		};
+		C0D1A4FF1BF540270021E768 /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C0D1A4FB1BF540190021E768 /* RMDateSelectionViewController.h */,
+				C0D1A4FC1BF540190021E768 /* RMDateSelectionViewController.m */,
+			);
+			name = RMDateSelectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D1A4FE1BF540190021E768 /* RMDateSelectionViewController.m in Sources */,
+				C0D1A4F91BF53F750021E768 /* RMActionController.m in Sources */,
 				C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +191,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+					../RMActionController/,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -200,6 +233,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+					../RMActionController/,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
