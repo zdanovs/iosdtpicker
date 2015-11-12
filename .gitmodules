@@ -1,0 +1,6 @@
+[submodule "RMDateSelectionViewController"]
+	path = RMDateSelectionViewController
+	url = git@github.com:CooperRS/RMDateSelectionViewController.git
+[submodule "RMActionController"]
+	path = RMActionController
+	url = git@github.com:CooperRS/RMActionController.git
