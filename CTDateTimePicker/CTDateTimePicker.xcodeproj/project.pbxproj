@@ -146,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */,
 				C0D1A4FE1BF540190021E768 /* RMDateSelectionViewController.m in Sources */,
 				C0D1A4F91BF53F750021E768 /* RMActionController.m in Sources */,
-				C01871551BF5395500AA8CCB /* CTDateTimePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
