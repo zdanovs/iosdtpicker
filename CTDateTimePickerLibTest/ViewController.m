@@ -30,11 +30,11 @@
     NSString* dtModule = [dtPicker module];
     NSLog(@"CTDateTimePicker module: %@", dtModule);
     
-    NSDate* currentDate = [dtPicker getCurrentDate];
-    NSLog(@"CTDateTimePicker current date is: %@", currentDate);
+    NSDate* currentDate = [dtPicker currentDate];
+    NSLog(@"CTDateTimePicker current date is: %@, last selected date is: %@", currentDate, [dtPicker lastSelectedDate]);
     
     CTCompletionActionBlock onComplete = ^void(NSDate* selectedDate) {
-        NSLog(@"CTDateTimePicker selected date is: %@", selectedDate);
+        NSLog(@"CTDateTimePicker selected date is: %@, last selected date is: %@", selectedDate, [dtPicker lastSelectedDate]);
         NSString* dateString = [NSDateFormatter localizedStringFromDate:selectedDate
                                                               dateStyle:NSDateFormatterShortStyle
                                                               timeStyle:NSDateFormatterShortStyle];

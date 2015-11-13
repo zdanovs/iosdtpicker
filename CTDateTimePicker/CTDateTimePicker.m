@@ -9,24 +9,45 @@
 #import "CTDateTimePicker.h"
 #import "RMDateSelectionViewController/RMDateSelectionViewController.h"
 
+@interface CTDateTimePicker ()
+
+@property (copy, atomic) NSDate* initialDate;
+@property (strong, atomic) NSDate* lastSelectedDateBacking;
+
+@end
+
 @implementation CTDateTimePicker
 
 @synthesize module;
+@synthesize currentDate;
+@synthesize lastSelectedDate;
+
+@synthesize initialDate;
+@synthesize lastSelectedDateBacking;
 
 -(instancetype)init {
+    CTDateTimePicker* xself = [self init:[NSDate date]];
+    return xself;
+}
+
+-(instancetype)init:(NSDate*)date {
     self = [super init];
     
     if (self) {
-        self.module = NSStringFromClass([self class]);
+        module = NSStringFromClass([self class]);
+        initialDate = date;
     }
     
     return self;
 }
 
--(NSDate*)getCurrentDate {
-    NSDate* currentDate = [NSDate date];
-    
-    return currentDate;
+-(NSDate*)currentDate {
+    NSDate* date = [NSDate date];
+    return date;
+}
+
+-(NSDate*)lastSelectedDate {
+    return lastSelectedDateBacking;
 }
 
 -(id)show:(id)sender withPresenter:(UIViewController*)presenter completeAction:(CTCompletionActionBlock)action {
@@ -34,7 +55,7 @@
 }
 
 -(void)dealloc {
-    self.module = nil;
+    module = nil;
 }
 
 - (id)openDateSelectionController:(id)sender withPresenter:(UIViewController*)presenter completeAction:(CTCompletionActionBlock)action {
@@ -44,8 +65,10 @@
     RMAction<RMActionController<UIDatePicker *> *> *selectAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"Select" style:RMActionStyleDone andHandler:^(RMActionController<UIDatePicker *> *controller) {
         NSLog(@"Successfully selected date: %@", controller.contentView.date);
         
+        self.lastSelectedDateBacking = controller.contentView.date;
+        
         if (action != nil) {
-            action(controller.contentView.date);
+            action(self.lastSelectedDateBacking);
         }
     }];
     
@@ -104,7 +127,7 @@
     //You can access the actual UIDatePicker via the datePicker property
     dateSelectionController.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     dateSelectionController.datePicker.minuteInterval = 1;
-    dateSelectionController.datePicker.date = [NSDate date];
+    dateSelectionController.datePicker.date = [self initialDate];
     
     //On the iPad we want to show the date selection view controller within a popover. Fortunately, we can use iOS 8 API for this! :)
     //(Of course only if we are running on iOS 8 or later)
