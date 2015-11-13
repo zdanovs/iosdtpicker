@@ -13,6 +13,7 @@
 
 @property (copy, atomic) NSDate* initialDate;
 @property (strong, atomic) NSDate* lastSelectedDateBacking;
+@property (assign, nonatomic) CTDateTimePickerStyle timePickerStyle;
 
 @end
 
@@ -24,6 +25,7 @@
 
 @synthesize initialDate;
 @synthesize lastSelectedDateBacking;
+@synthesize timePickerStyle;
 
 -(instancetype)init {
     CTDateTimePicker* xself = [self init:[NSDate date]];
@@ -60,7 +62,7 @@
 
 - (id)openDateSelectionController:(id)sender withPresenter:(UIViewController*)presenter completeAction:(CTCompletionActionBlock)action {
     // Black or White popup style
-    RMActionControllerStyle style = YES ? RMActionControllerStyleBlack : RMActionControllerStyleWhite;
+    RMActionControllerStyle style = timePickerStyle == CTDateTimePickerStyleBlack ? RMActionControllerStyleBlack : RMActionControllerStyleWhite;
     
     RMAction<RMActionController<UIDatePicker *> *> *selectAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"Select" style:RMActionStyleDone andHandler:^(RMActionController<UIDatePicker *> *controller) {
         NSLog(@"Successfully selected date: %@", controller.contentView.date);

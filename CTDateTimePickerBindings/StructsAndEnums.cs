@@ -1,20 +1,8 @@
-using System;
-using ObjCRuntime;
-
-[Native]
-public enum RMActionControllerStyle : nint
+namespace CTDateTimePicker.Bindings
 {
-	White,
-	Black,
-	Default = White
-}
-
-[Native]
-public enum RMActionStyle : nint
-{
-	Done,
-	Cancel,
-	Destructive,
-	Additional,
-	Default = Done
+	public enum CTDateTimePickerStyle
+	{
+		White,
+		Black
+	}
 }

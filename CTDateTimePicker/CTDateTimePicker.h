@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(int, CTDateTimePickerStyle) {
+    CTDateTimePickerStyleWhite,
+    CTDateTimePickerStyleBlack,
+};
+
 typedef void (^CTCompletionActionBlock)(NSDate* selectedDate);
 
 @interface CTDateTimePicker : NSObject {

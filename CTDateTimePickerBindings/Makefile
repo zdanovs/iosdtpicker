@@ -13,7 +13,7 @@ LIB_PATH=$(LIB_DIR)/$(LIB_NAME)
 all: bindings
 
 bindings: getlib definitions
-	$(MDTOOL) -v build --target:Build --configuration:"Release|iPhone" $(SLN_NAME)
+	$(MDTOOL) -v build --target:Build --configuration:"Release" $(SLN_NAME)
 
 definitions:
 	$(SHARPIE) xcode -sdks
@@ -28,7 +28,7 @@ getlib: $(LIB_PATH)
 clean:
 	-@rm -rf $(BIND_DIR)/obj
 	-@rm -rf $(BIND_DIR)/bin
-	-@rm -rf $(LIB_NAME)
+	-@rm -f $(LIB_NAME)
 
 .PHONY: all clean bindings getlib
 

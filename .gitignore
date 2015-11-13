@@ -3,3 +3,8 @@ xcuserdata
 xcshareddata
 CTDateTimePicker/Build
 CTDateTimePickerLibTest/Build
+CTDateTimePickerBindings/bin
+CTDateTimePickerBindings/obj
+CTDateTimePicker/libCTDateTimePicker-universal.a
+CTDateTimePickerBindings/libCTDateTimePicker-universal.a
+*.userprefs
