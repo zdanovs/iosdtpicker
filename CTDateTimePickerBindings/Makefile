@@ -13,7 +13,7 @@ LIB_PATH=$(LIB_DIR)/$(LIB_NAME)
 all: bindings
 
 bindings: getlib definitions
-	$(MDTOOL) -v build --target:Build --configuration:"Release" $(SLN_NAME)
+	$(MDTOOL) -v build --target:Build --configuration:"Debug" $(SLN_NAME)
 
 definitions:
 	$(SHARPIE) xcode -sdks

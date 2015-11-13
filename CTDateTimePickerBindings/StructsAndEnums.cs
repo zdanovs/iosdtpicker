@@ -1,4 +1,4 @@
-namespace CTDateTimePicker.Bindings
+namespace CTDateTimePickerBindings
 {
 	public enum CTDateTimePickerStyle
 	{

@@ -3,7 +3,7 @@ using Foundation;
 using ObjCRuntime;
 using UIKit;
 
-namespace CTDateTimePicker.Bindings
+namespace CTDateTimePickerBindings
 {
 	// typedef void (^CTCompletionActionBlock)(NSDate *);
 	delegate void CTCompletionActionBlock (NSDate arg0);
