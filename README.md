@@ -25,9 +25,9 @@ To create Xamarin/C# bindings for RMDateSelectionViewController project
 
 ## Dev/Process Issues
  - Xcode "Product" path for library is always wrong
- - "Build" vs "build" when usin gui or cli
+ - "Build" vs "build" when using gui or cli
  - Xcode endless building (Locations/DerivedData issue)
- - XCode project management - Add files to project:
+ - Xcode project management - Add files to project:
    1. Can't use "Groups"
    2. Can't add "Folder reference" to a build process directly
    3. To fix 2. you should use "Add other" in a "Build phases"
