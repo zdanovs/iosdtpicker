@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{102539E2-E402-4C24-ABDD-DD566BC09C57}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>CTDateTimePicker</RootNamespace>
+    <RootNamespace>CTDateTimePickerBindings</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>CTDateTimePickerBindings</AssemblyName>
   </PropertyGroup>
