@@ -248,6 +248,12 @@
 		C0487DF41BF51A8D00811D40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+					../RMActionController/,
+					../RMDateSelectionViewController,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -257,6 +263,12 @@
 		C0487DF51BF51A8D00811D40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+					../RMActionController/,
+					../RMDateSelectionViewController,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

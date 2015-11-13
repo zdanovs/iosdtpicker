@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *captionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIButton *pickDateButton;
+- (IBAction)onPickDateButton:(UIButton *)sender forEvent:(UIEvent *)event;
 
 @end
 

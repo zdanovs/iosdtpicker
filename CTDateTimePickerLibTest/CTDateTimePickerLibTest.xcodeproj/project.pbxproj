@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7626A6DD1BF5AA4A00316007 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7626A6DC1BF5AA4A00316007 /* Images.xcassets */; };
+		769CF7C81BF5B54100BE3D2F /* libCTDateTimePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 769CF7C71BF5B54100BE3D2F /* libCTDateTimePicker.a */; };
 		76C139A31BF5A8E20077304E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1399C1BF5A8E20077304E /* AppDelegate.m */; };
 		76C139A61BF5A8E20077304E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1399F1BF5A8E20077304E /* main.m */; };
 		76C139A71BF5A8E20077304E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C139A11BF5A8E20077304E /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		7626A6DC1BF5AA4A00316007 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7683016B1BF5A76A00831276 /* CTDateTimePickerLibTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTDateTimePickerLibTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		769CF7C71BF5B54100BE3D2F /* libCTDateTimePicker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCTDateTimePicker.a; path = "../../CTDateTimePicker/build/Debug-iphoneos/libCTDateTimePicker.a"; sourceTree = "<group>"; };
 		76C1399B1BF5A8E20077304E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		76C1399C1BF5A8E20077304E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		76C1399E1BF5A8E20077304E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769CF7C81BF5B54100BE3D2F /* libCTDateTimePicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 		7683016D1BF5A76A00831276 /* CTDateTimePickerLibTest */ = {
 			isa = PBXGroup;
 			children = (
+				769CF7C91BF5B6DC00BE3D2F /* Libs */,
 				76C1399B1BF5A8E20077304E /* AppDelegate.h */,
 				76C1399C1BF5A8E20077304E /* AppDelegate.m */,
 				76C1399E1BF5A8E20077304E /* Info.plist */,
@@ -69,6 +73,14 @@
 				7626A6DC1BF5AA4A00316007 /* Images.xcassets */,
 			);
 			path = CTDateTimePickerLibTest;
+			sourceTree = "<group>";
+		};
+		769CF7C91BF5B6DC00BE3D2F /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				769CF7C71BF5B54100BE3D2F /* libCTDateTimePicker.a */,
+			);
+			name = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +266,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctco.CTDateTimePickerLibTest;
@@ -266,6 +282,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				HEADER_SEARCH_PATHS = (
+					./,
+					../,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctco.CTDateTimePickerLibTest;

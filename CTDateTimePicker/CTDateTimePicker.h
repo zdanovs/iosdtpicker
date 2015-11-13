@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+typedef void (^CTCompletionActionBlock)(NSDate* selectedDate);
 
 @interface CTDateTimePicker : NSObject {
     @public
@@ -16,6 +19,8 @@
 @property (strong, nonatomic) NSString* module;
 
 -(instancetype)init;
+-(NSDate*)getCurrentDate;
+-(id)show:(id)sender withPresenter:(UIViewController*)presenter completeAction:(CTCompletionActionBlock)action;
 -(void)dealloc;
 
 @end
