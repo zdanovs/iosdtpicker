@@ -10,4 +10,20 @@
 
 @implementation CTDateTimePicker
 
+@synthesize module;
+
+-(instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.module = NSStringFromClass([self class]);
+    }
+    
+    return self;
+}
+
+-(void)dealloc {
+    self.module = nil;
+}
+
 @end

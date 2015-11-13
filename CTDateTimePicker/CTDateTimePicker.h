@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTDateTimePicker : NSObject
+@interface CTDateTimePicker : NSObject {
+    @public
+    NSString* module;
+}
+
+@property (strong, nonatomic) NSString* module;
+
+-(instancetype)init;
+-(void)dealloc;
 
 @end
