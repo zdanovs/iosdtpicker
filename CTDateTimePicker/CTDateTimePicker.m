@@ -15,6 +15,8 @@
 @property (strong, atomic) NSDate* lastSelectedDateBacking;
 @property (assign, nonatomic) CTDateTimePickerStyle timePickerStyle;
 
+-(void)invokeAction:(CTCompletionActionBlock)action withDate:(NSDate*)date;
+
 @end
 
 @implementation CTDateTimePicker
@@ -67,11 +69,7 @@
     RMAction<RMActionController<UIDatePicker *> *> *selectAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"Select" style:RMActionStyleDone andHandler:^(RMActionController<UIDatePicker *> *controller) {
         NSLog(@"Successfully selected date: %@", controller.contentView.date);
         
-        self.lastSelectedDateBacking = controller.contentView.date;
-        
-        if (action != nil) {
-            action(self.lastSelectedDateBacking);
-        }
+        [self invokeAction:action withDate:controller.contentView.date];
     }];
     
     RMAction<RMActionController<UIDatePicker *> *> *cancelAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"Cancel" style:RMActionStyleCancel andHandler:^(RMActionController<UIDatePicker *> *controller) {
@@ -93,24 +91,36 @@
     RMAction<RMActionController<UIDatePicker *> *> *in15MinAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"15 Min" style:RMActionStyleAdditional andHandler:^(RMActionController<UIDatePicker *> *controller) {
         controller.contentView.date = [NSDate dateWithTimeIntervalSinceNow:15*60];
         NSLog(@"15 Min button tapped");
+        
+        [self invokeAction:action withDate:controller.contentView.date];
+        [controller dismissViewControllerAnimated:YES completion:nil];
     }];
     in15MinAction.dismissesActionController = NO;
     
     RMAction<RMActionController<UIDatePicker *> *> *in30MinAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"30 Min" style:RMActionStyleAdditional andHandler:^(RMActionController<UIDatePicker *> *controller) {
         controller.contentView.date = [NSDate dateWithTimeIntervalSinceNow:30*60];
         NSLog(@"30 Min button tapped");
+        
+        [self invokeAction:action withDate:controller.contentView.date];
+        [controller dismissViewControllerAnimated:YES completion:nil];
     }];
     in30MinAction.dismissesActionController = NO;
     
     RMAction<RMActionController<UIDatePicker *> *> *in45MinAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"45 Min" style:RMActionStyleAdditional andHandler:^(RMActionController<UIDatePicker *> *controller) {
         controller.contentView.date = [NSDate dateWithTimeIntervalSinceNow:45*60];
         NSLog(@"45 Min button tapped");
+        
+        [self invokeAction:action withDate:controller.contentView.date];
+        [controller dismissViewControllerAnimated:YES completion:nil];
     }];
     in45MinAction.dismissesActionController = NO;
     
     RMAction<RMActionController<UIDatePicker *> *> *in60MinAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"60 Min" style:RMActionStyleAdditional andHandler:^(RMActionController<UIDatePicker *> *controller) {
         controller.contentView.date = [NSDate dateWithTimeIntervalSinceNow:60*60];
         NSLog(@"60 Min button tapped");
+        
+        [self invokeAction:action withDate:controller.contentView.date];
+        [controller dismissViewControllerAnimated:YES completion:nil];
     }];
     in60MinAction.dismissesActionController = NO;
     
@@ -118,6 +128,8 @@
     
     [dateSelectionController addAction:groupedAction];
     
+    /*
+     TODO: okertanov: now action disabled by request
     RMAction<RMActionController<UIDatePicker *> *> *nowAction = [RMAction<RMActionController<UIDatePicker *> *> actionWithTitle:@"Now" style:RMActionStyleAdditional andHandler:^(RMActionController<UIDatePicker *> * _Nonnull controller) {
         controller.contentView.date = [NSDate date];
         NSLog(@"Now button tapped");
@@ -125,6 +137,7 @@
     nowAction.dismissesActionController = NO;
     
     [dateSelectionController addAction:nowAction];
+    */
     
     //You can access the actual UIDatePicker via the datePicker property
     dateSelectionController.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
@@ -148,6 +161,14 @@
     [presenter presentViewController:dateSelectionController animated:YES completion:nil];
     
     return dateSelectionController;
+}
+
+-(void)invokeAction:(CTCompletionActionBlock)action withDate:(NSDate*)date {
+    self.lastSelectedDateBacking = date;
+    
+    if (action != nil) {
+        action(self.lastSelectedDateBacking);
+    }
 }
 
 @end
