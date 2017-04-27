@@ -24,6 +24,18 @@ namespace CTDateTimePickerBindings
 		[Export ("lastSelectedDate", ArgumentSemantic.Strong)]
 		NSDate LastSelectedDate { get; }
 
+		// @property NSDate * minimumDate;
+		[Export ("minimumDate", ArgumentSemantic.Assign)]
+		NSDate MinimumDate { get; set; }
+
+		// @property NSDate * maximumDate;
+		[Export ("maximumDate", ArgumentSemantic.Assign)]
+		NSDate MaximumDate { get; set; }
+
+		// @property int pickerMode;
+		[Export ("pickerMode")]
+		int PickerMode { get; set; }
+
 		// -(instancetype)init:(NSDate *)date;
 		[Export ("init:")]
 		IntPtr Constructor (NSDate date);

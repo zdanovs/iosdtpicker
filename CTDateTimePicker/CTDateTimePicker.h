@@ -20,11 +20,15 @@ typedef void (^CTCompletionActionBlock)(NSDate* selectedDate);
     NSString* module;
     NSDate* currentDate;
     NSDate* lastSelectedDate;
+    int pickerMode;
 }
 
 @property (strong, readonly, nonatomic) NSString* module;
 @property (strong, readonly, atomic) NSDate* currentDate;
 @property (strong, readonly, atomic) NSDate* lastSelectedDate;
+@property NSDate* minimumDate;
+@property NSDate* maximumDate;
+@property int pickerMode;
 
 -(instancetype)init;
 -(instancetype)init:(NSDate*)date;
